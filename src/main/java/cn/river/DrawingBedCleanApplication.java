@@ -1,4 +1,4 @@
-package cn.river.drawingbedclean;
+package cn.river;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

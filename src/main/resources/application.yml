@@ -1,0 +1,15 @@
+
+
+# 七牛云
+qiniu:
+  #	Key
+  ak: d0ux_HXMA9iRwofw9DVL45lYl9QvrIzlo9e8kHU8
+  sk: qoVyx2PJwXeOItMwJrGJ5XS-lYq7afe2gE7O2P07
+  # 存储空间名称
+  bucket: wind-chat
+
+# 清理指定目录下的md文件里面的垃圾图片
+directory: D:\Desktop\啥都有\mdNote
+
+# 多少周期清理一次
+cleanCycle: 0 0 0 1 1/30 ? *
