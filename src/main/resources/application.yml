@@ -7,6 +7,8 @@ qiniu:
   sk: qoVyx2PJwXeOItMwJrGJ5XS-lYq7afe2gE7O2P07
   # 存储空间名称
   bucket: wind-chat
+  # 存储空间下的目录
+  dir: typora
 
 # 清理指定目录下的md文件里面的垃圾图片
 directory: D:\Desktop\啥都有\mdNote

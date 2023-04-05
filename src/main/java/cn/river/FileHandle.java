@@ -21,13 +21,14 @@ public class FileHandle {
     List<String> list =new ArrayList();
 
     /**
-     * 获取目录md文件列表
+     * 获取目录md文件列表内的所有图片url
      */
-    public List<String> getFileList(){
+    public List<String> getFileList() throws IOException {
         File file = new File(directory);
 
         traverseDirectory(file);
-        return list;
+        List<String> imgUrlList = getImgUrlList(list);
+        return imgUrlList;
     }
 
     /**
@@ -35,7 +36,7 @@ public class FileHandle {
      * @param directory
      * @return
      */
-    private List<String> traverseDirectory(File directory) {
+    public List<String> traverseDirectory(File directory) {
         File[] files = directory.listFiles();
 
         if (files != null) {
@@ -69,7 +70,7 @@ public class FileHandle {
                 Pattern compile = Pattern.compile(regex);
                 Matcher matcher = compile.matcher(line);
                 while (matcher.find()){
-                    String url = matcher.group();
+                    String url = matcher.group().replaceFirst("http://qn.lwy23czl.top/","");
                     urlList.add(url);
                 }
             }
